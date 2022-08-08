@@ -71,4 +71,4 @@ jobs:
             sudo docker pull rus1503nus/yamdb
             #остановка всех контейнеров
             sudo docker stop $(sudo docker ps -a -q)
-            sudo docker run --rm -d -p 5000:5000 rus1503nus/yamdb
+            sudo docker run --rm -d -p 5000:5000 rus1503nus/infra_web
