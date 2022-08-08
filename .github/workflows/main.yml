@@ -14,7 +14,7 @@ jobs:
         python-version: 3.7
 
     - name: Install dependencies
-      run:
+      run: |
         # обновление pip
         python -m pip install --upgrade pip 
         # установка flake8 и его плагинов
@@ -23,7 +23,7 @@ jobs:
         pip install -r requirements.txt 
 
     - name: Test with flake8 and django tests
-      run:
+      run: |
         # запуск проверки проекта по flake8
         python -m flake8
         # перейти в папку, содержащую manage.py — 
@@ -66,7 +66,7 @@ jobs:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USER }}
           key: ${{ secrets.SSH_KEY }}
-          script:
+          script: |
             # Выполняет pull образа с DockerHub
             sudo docker pull rus1503nus/yamdb
             #остановка всех контейнеров
